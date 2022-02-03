@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:target{
+    outline: none;
+}
+/* BODY */
+
+body{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* HEADER */
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem 0 1rem 0;
+    background-color: white;
+
+    min-width: 100vw;
+}
+
+#barata{
+    transition: font-weight 0.5s;
+
+    color:red;
+    font-weight: bold;
+}
+
+
+#home:hover{
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    padding: 1rem 0 1rem 0;
+
+    background-color: white;
+    text-align: center;
+
+    font-size: 12pt;
+}
+
+.grid-cell {
+    display: grid;
+    width: 20rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-item {
+    text-align: center;
+    overflow: hidden;
+} 
+
+/* ARCHITECTURE.HTML & ART.HTML & DIGITAL.HTML */
+
+.grid{
+    margin-bottom: 4rem;
+    margin-top: 3.3rem;
+
+	-webkit-column-count: 2;
+	-webkit-column-gap:   1.5rem;
+	-moz-column-count: 2;
+	-moz-column-gap: 1.5rem;
+    column-count: 2;
+    column-gap: 1.5rem;
+
+    max-width: 900px;}
+
+.grid-card img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.grid-card{
+    break-inside: avoid-column;
+    padding-bottom: 3rem;
+}
+
+.grid-card h1, .show h1, .grid-card h2, .show h2, .grid-card h3, .grid-card h4{
+    padding-top: 1rem;
+    font-size: 12pt;
+    font-weight: 500;
+    text-align: left;
+}
+
+.grid-card h2, .show h2, .grid-card h3, .grid-card h4{
+    font-weight: 400;
+    text-align: right;
+}
+
+.grid-card h3, .grid-card h4{
+    padding-top: 0.5rem;
+    font-weight: 100;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.grid-card h4{
+    padding-top: 0.25rem;
+
+    font-style: italic;
+}
+
+
+.grid-card:hover{
+    text-decoration: underline;
+}
+
+.info-cell h3:hover{
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width:940px) {
+        .grid {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        max-width: 90vw;
+    }
+} 
+
+.info-cell{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.info-cell-1{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+
+/* ART.HTML/000 */ 
+
+.show{
+    padding-top: 3.3rem;
+    
+    display: flex;
+    margin: auto;
+    
+    align-content: center;
+    justify-content: center;
+    
+    width: 90vw;
+    height:  85vh;
+}
+
+.show h1,.show h2{
+    font-size: 15pt;
+}
+
+.show i{
+    font-size: 12pt;
+    font-weight: 200;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.show img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.info-cell-art{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+/* INDEX.HTML */
+
+.container{
+    overflow: hidden;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    width: 21.14rem;
+    height: 25rem;
+
+    background-color: black;
+    -webkit-mask-image: url(../imagens/index/logo.svg);
+    mask-image: url(../imagens/index/logo.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    transition: background-color 0.5s;
+}
+
+#logo:hover{
+    background-color: red;
+    -webkit-mask-image: url(../imagens/index/logo.svg);
+    mask-image: url(../imagens/index/logo.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+/* 404.HTML */
+
+#not-found{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    font-size: 20pt;
+    font-weight: normal;
+}
+
+#error-404{
+    font-size: 32pt;
+    font-weight: normal;
+}
+
+/* OTHERES */
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+a{
+    transition: color 0.5s, font-weight 0.5s;
+}
+
+a:hover{
+    font-weight: bold;
+    text-decoration: none;
+
+    color: rgba(250, 0, 0);
+}
+
+.link-selected{
+    font-weight: bold;
+}
+
+.link-selected:hover{
+    text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+#next{
+    position: fixed;
+    right: 0;
+    top: 50%;
+
+    padding:3rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+#previous{
+    position: fixed;
+    left: 0;
+    top: 50%;
+
+    padding:3rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+#next a, #previous a{
+    font-size: 40pt;
+    font-weight: 200;
+
+    color: rgba(0, 0, 0, 0.1);
+}
+
+#next a:hover, #previous a:hover{
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: color 0.5s, font-weight 0.5s;
+
+    color: rgba(250, 0, 0);
+}
+
+@media screen and (max-width:800px) {
+        #next a, #previous a{
+    font-size: 25pt;
+}
+        #next, #previous {
+    padding:1.5rem;
+}
+}
