@@ -9,17 +9,18 @@
 
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" type="image/png" href="./imagens/all/favicon.png">
+    <script src="./js/navscroll.js"></script>
 
-    <title>jgbarata | art | digital</title>
+    <title>jgbarata | digital</title>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <a id="home" href="./index.html">jg<samp id="barata">barata</samp></a>
     </header>
     <main>
-        <div class="grid">
-            <div class="grid-card">
+        <div class="column">
+            <div class="column-card">
                 <a href="#003">
                     <img src="./imagens/digital/low-quality/003_purple.jpg" alt="003">
                     <div class="info-cell">
@@ -34,7 +35,7 @@
                     <span style="background-image: url('./imagens/digital/003_purple.jpg')"></span>
                 </a>
             </div>
-            <div class="grid-card">
+            <div class="column-card">
                 <a href="#002">
                     <img src="./imagens/digital/low-quality/002_blue.jpg" alt="002">
                     <div class="info-cell">
@@ -49,7 +50,7 @@
                     <span style="background-image: url('./imagens/digital/002_blue.jpg')"></span>
                 </a>
             </div>
-            <div class="grid-card">
+            <div class="column-card">
                 <a href="#001">
                     <img src="./imagens/digital/low-quality/001_orange.jpg" alt="001">
                     <div class="info-cell">
@@ -64,7 +65,7 @@
                     <span style="background-image: url('./imagens/digital/001_orange.jpg')"></span>
                 </a>
             </div>
-            <div class="grid-card">
+            <div class="column-card">
                 <a href="#000">
                     <img src="./imagens/digital/low-quality/000_red.jpg" alt="000">
                     <div class="info-cell">
@@ -81,13 +82,14 @@
             </div>
         </div>
     </main>
-        <div id="previous">
+        <!-- <div id="previous">
             <a href="./art.html">&#60;</a>
-        </div>
+        </div> -->
     <footer>
         <div class="grid-cell">
             <div class="grid-item"><a href="./architecture.html">architecture</a></div>
-            <div class="grid-item"><a class="link-selected" href="./art.html">art</a></div>
+            <div class="grid-item"><a href="./art.html">art</a></div>
+            <div class="grid-item"><a class="link-selected" href="#">digital</a></div>
         </div>
     </footer>
 </body>

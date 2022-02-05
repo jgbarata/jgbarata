@@ -16,7 +16,7 @@ body{
 
 /* HEADER */
 
-header{
+#header{
     position: fixed;
     left: 0;
     top: 0;
@@ -27,6 +27,8 @@ header{
     background-color: white;
 
     min-width: 100vw;
+
+    transition: top 0.5s;
 }
 
 #barata{
@@ -52,18 +54,18 @@ footer{
     justify-content: center;
 
     width: 100vw;
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0 1.5rem 0;
 
     background-color: white;
     text-align: center;
 
-    font-size: 12pt;
+    font-size: 13.5pt;
 }
 
 .grid-cell {
     display: grid;
     width: 20rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-item {
@@ -73,7 +75,7 @@ footer{
 
 /* ARCHITECTURE.HTML & ART.HTML & DIGITAL.HTML */
 
-.grid{
+.column{
     margin-bottom: 4rem;
     margin-top: 3.3rem;
 
@@ -84,31 +86,32 @@ footer{
     column-count: 2;
     column-gap: 1.5rem;
 
-    max-width: 900px;}
+    max-width: 900px;
+}
 
-.grid-card img {
+.column-card img {
     width: 100% !important;
     height: auto !important;
 }
 
-.grid-card{
+.column-card{
     break-inside: avoid-column;
     padding-bottom: 3rem;
 }
 
-.grid-card h1, .show h1, .grid-card h2, .show h2, .grid-card h3, .grid-card h4{
+.column-card h1, .show h1, .column-card h2, .show h2, .column-card h3, .column-card h4{
     padding-top: 1rem;
     font-size: 12pt;
     font-weight: 500;
     text-align: left;
 }
 
-.grid-card h2, .show h2, .grid-card h3, .grid-card h4{
+.column-card h2, .show h2, .column-card h3, .column-card h4{
     font-weight: 400;
     text-align: right;
 }
 
-.grid-card h3, .grid-card h4{
+.column-card h3, .column-card h4{
     padding-top: 0.5rem;
     font-weight: 100;
     text-align: left;
@@ -116,14 +119,13 @@ footer{
     color: rgba(0, 0, 0, 0.6);
 }
 
-.grid-card h4{
+.column-card h4{
     padding-top: 0.25rem;
 
     font-style: italic;
 }
 
-
-.grid-card:hover{
+.column-card:hover{
     text-decoration: underline;
 }
 
@@ -133,7 +135,7 @@ footer{
 }
 
 @media screen and (max-width:940px) {
-        .grid {
+        .column {
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
@@ -192,38 +194,38 @@ footer{
 
 .lightbox {
   /* Default to hidden */
-  display: none;
+    display: none;
 
   /* Overlay entire screen */
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
   /* A bit of padding around image */
-  padding: 1em;
+    padding: 1em;
 
   /* Translucent background */
-  background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 /* Unhide the lightbox when it's the target */
 .lightbox:target {
-  display: block;
+    display: block;
 }
 
 .lightbox span {
   /* Full width and height */
-  display: block;
-  width: 100%;
-  height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 
   /* Size and position background image */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
@@ -260,19 +262,107 @@ footer{
     mask-repeat: no-repeat;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:700px),(max-height:700px) {
         #logo{
     height: 20rem;
     width: 20rem;
 }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:500px),(max-height:600px) {
         #logo{
     height: 15rem;
     width: 15rem;
 }
 }
+
+/* ABOUT.HTML */
+
+.grid{
+    display: grid;
+
+    max-width: 500px;
+
+    padding: 5rem 1.5rem 7rem 1.5rem;
+
+}
+
+.grid-card{
+    display: grid;
+    grid-template-columns: auto auto;
+    min-height: 2rem;
+    gap: 1rem;
+    
+    padding-top: 3rem;
+}
+
+.center{
+    justify-content: center;
+}
+
+.grid-card h1, .grid-card h2, .grid-card h3, .grid-card h4, .grid-card a, .grid-card a:hover {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.grid-card h1{
+    font-size: 15pt;
+    font-weight: 500;
+
+    text-align: left;
+
+    grid-column: span 2;
+    color: red;
+}
+
+.grid-card h3,.grid-card a, .grid-card a:hover{
+    font-size: 12pt;
+
+    text-align: right;
+}
+
+.grid-card h4{
+    font-size: 13.5pt;
+    font-weight: normal;
+
+    text-align: justify;
+
+    grid-column: span 2;
+}
+
+.grid-card small{
+    font-size: 10pt;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.grid-card b{
+    font-weight: bolder;
+}
+
+
+.red{
+    color: red;
+}
+
+
+/* .grid-card h2, .grid-card h3, .grid-card h4{
+    font-weight: 400;
+    text-align: right;
+}
+
+.grid-card h3, .grid-card h4{
+    padding-top: 0.5rem;
+    font-weight: 100;
+    text-align: left;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.grid-card h4{
+    padding-top: 0.25rem;
+
+    font-style: italic;
+} */
 
 /* 404.HTML */
 
