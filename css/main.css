@@ -240,8 +240,8 @@ footer{
 }
 
 #logo{
-    width: 21.14rem;
     height: 25rem;
+    width: 25rem;
 
     background-color: black;
     -webkit-mask-image: url(../imagens/index/logo.svg);
@@ -258,6 +258,20 @@ footer{
     mask-image: url(../imagens/index/logo.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+}
+
+@media screen and (max-width:700px) {
+        #logo{
+    height: 20rem;
+    width: 20rem;
+}
+}
+
+@media screen and (max-width:500px) {
+        #logo{
+    height: 15rem;
+    width: 15rem;
+}
 }
 
 /* 404.HTML */
