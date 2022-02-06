@@ -96,7 +96,7 @@ footer{
 
 .column-card{
     break-inside: avoid-column;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
 .column-card h1, .show h1, .column-card h2, .show h2, .column-card h3, .column-card h4{
