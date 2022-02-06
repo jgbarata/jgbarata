@@ -65,7 +65,7 @@ footer{
 .grid-cell {
     display: grid;
     width: 20rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-item {
