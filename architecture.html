@@ -9,17 +9,18 @@
         
         <link rel="stylesheet" href="./css/main.css">
         <link rel="shortcut icon" type="image/png" href="./imagens/all/favicon.png">
-        <script src="./js/navscroll.js"></script>
 
+        <script src="./js/navscroll.js"></script>
         <title>jgbarata | architecture</title>
     </head>
     <body>
         <header id="header">
             <a id="home" href="./index.html">jg<samp id="barata">barata</samp></a>
         </header>
-        <main>
-            <div class="column">
-                <div class="column-card">
+    <main>
+        <div class="column">
+            <div class="column-card">
+                <div class="content">
                     <a href="./architecture/007.html">
                         <img src="./imagens/architecture/low-quality/007.jpg"alt="007">
                         <div class="info-cell">
@@ -32,7 +33,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="column-card">
+            </div>
+            <div class="column-card">
+                <div class="content">
                     <a href="./architecture/006.html">
                         <img src="./imagens/architecture/low-quality/006.jpg"alt="006">
                         <div class="info-cell">
@@ -45,7 +48,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="column-card">
+            </div>
+            <div class="column-card">
+                <div class="content">
                     <a href="./architecture/005.html">
                         <img src="./imagens/architecture/low-quality/005.jpg"alt="005">
                         <div class="info-cell">
@@ -58,7 +63,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="column-card">
+            </div>
+            <div class="column-card">
+                <div class="content">
                     <a href="./architecture/004.html">
                         <img src="./imagens/architecture/low-quality/004.jpg"alt="004">
                         <div class="info-cell">
@@ -71,7 +78,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="column-card">
+            </div>
+            <div class="column-card">
+                <div class="content">
                     <a href="./architecture/003.html">
                         <img src="./imagens/architecture/low-quality/003.jpg"alt="003">
                         <div class="info-cell">
@@ -84,50 +93,58 @@
                         </div>
                     </a>
                 </div>
-                <div class="column-card">
+            </div>
+            <div class="column-card">
+                <div class="content">
                     <a href="./architecture/002.html">
                         <img src="./imagens/architecture/low-quality/002.jpg"alt="002">
                         <div class="info-cell">
-                        <h1>002 | <i>container residence</i></h1>
-                        <h2>mar 2020</h2>
-                    </div>
-                    <div class="info-cell-1">
-                        <h3>student residence</h3>
-                        <h4>campolide, lisbon, portugal</h4>
-                    </div>
-                </a>
+                            <h1>002 | <i>container residence</i></h1>
+                            <h2>mar 2020</h2>
+                        </div>
+                        <div class="info-cell-1">
+                            <h3>student residence</h3>
+                            <h4>campolide, lisbon, portugal</h4>
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="column-card">
-                <a href="./architecture/001.html">
-                    <img src="./imagens/architecture/low-quality/001.jpg"alt="the cube">
-                    <div class="info-cell">
-                        <h1>001 | <i>tall house</i></h1>
-                        <h2>jun 2020</h2>
-                    </div>
-                    <div class="info-cell-1">
-                        <h3>family house + art studio</h3>
-                        <h4>olho de boi, almada, portugal</h4>
-                    </div>
-                </a>
+                <div class="content">
+                    <a href="./architecture/001.html">
+                        <img src="./imagens/architecture/low-quality/001.jpg"alt="the cube">
+                        <div class="info-cell">
+                            <h1>001 | <i>tall house</i></h1>
+                            <h2>jun 2020</h2>
+                        </div>
+                        <div class="info-cell-1">
+                            <h3>family house + art studio</h3>
+                            <h4>olho de boi, almada, portugal</h4>
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="column-card">
-                <a href="./architecture/000.html">
-                    <img src="./imagens/architecture/low-quality/000.jpg" alt="the cube">
-                    <div class="info-cell">
-                        <h1>000 | <i>the cube</i></h1>
-                        <h2>jan 2019</h2>
-                    </div>
-                    <div class="info-cell-1">
-                        <h3>student house</h3>
-                        <h4>alto do duque, lisbon, portugal</h4>
-                    </div>
-                </a>
+                <div class="content">
+                    <a href="./architecture/000.html">
+                        <img src="./imagens/architecture/low-quality/000.jpg" alt="the cube">
+                        <div class="info-cell">
+                            <h1>000 | <i>the cube</i></h1>
+                            <h2>jan 2019</h2>
+                        </div>
+                        <div class="info-cell-1">
+                            <h3>student house</h3>
+                            <h4>alto do duque, lisbon, portugal</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <span class="item break"></span>
+            <span class="item break"></span>
+            <span class="item break"></span>
             </div>
         </div>
     </main>
-    <!-- <div id="next">
-        <a href="./art.html">&#62;</a>
-    </div> -->
     <footer>
         <div class="grid-cell">
             <div class="grid-item"><a class="link-selected" href="#">architecture</a></div>
@@ -135,4 +152,35 @@
         </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+<script>
+    function resizeGridItem(item) {
+        grid = document.getElementsByClassName("column")[0];
+        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+        rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+        item.style.gridRowEnd = "span " + rowSpan;
+    }
+
+    function resizeAllGridItems() {
+        allItems = document.getElementsByClassName("column-card");
+        for (x = 0; x < allItems.length; x++) {
+            resizeGridItem(allItems[x]);
+        }
+    }
+
+    window.onload = resizeAllGridItems();
+
+    window.addEventListener("resize", resizeAllGridItems);
+
+    allItems = document.getElementsByClassName("column-card");
+    for (x = 0; x < allItems.length; x++) {
+        imagesLoaded(allItems[x], resizeInstance);
+    }
+
+    function resizeInstance(instance) {
+        item = instance.elements[0];
+        resizeGridItem(item);
+    }
+</script>
 </html>
