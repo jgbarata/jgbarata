@@ -73,7 +73,7 @@ footer{
     overflow: hidden;
 } 
 
-/* ARCHITECTURE.HTML & ART.HTML & DIGITAL.HTML */
+/* ARCHITECTURE.HTML & ART.HTML */
 
 .column{
     display: grid;
@@ -143,7 +143,6 @@ footer{
     display: grid;
     grid-template-columns: auto;
 }
-
 
 /* ART.HTML/000 */ 
 
