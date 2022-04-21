@@ -21,76 +21,113 @@
     <main>
         <div class="column">
             <div class="column-card">
-                <a href="#003">
-                    <img src="./imagens/digital/low-quality/003_purple.jpg" alt="003">
-                    <div class="info-cell">
-                        <h1>003 | <i>purple</i></h1>
-                        <h2>jun 2020</h2>
-                    </div>
-                    <div>
-                        <h3>vector art <br> 42 x 42 cm</h3>
-                    </div>
-                </a>
-                <a href="#!" class="lightbox" id="003">
-                    <span style="background-image: url('./imagens/digital/003_purple.jpg')"></span>
-                </a>
+                <div class="content">
+                    <a class="zoom-in" href="#003">
+                        <img src="./imagens/digital/low-quality/003_purple.jpg" alt="003">
+                        <div class="info-cell">
+                            <h1>003 | <i>purple</i></h1>
+                            <h2>jun 2020</h2>
+                        </div>
+                        <div>
+                            <h3>vector art <br> 42 x 42 cm</h3>
+                        </div>
+                    </a>
+                    <a href="#!" class="lightbox zoom-out" id="003">
+                        <span style="background-image: url('./imagens/digital/003_purple.jpg')"></span>
+                    </a>
+                </div>
             </div>
             <div class="column-card">
-                <a href="#002">
-                    <img src="./imagens/digital/low-quality/002_blue.jpg" alt="002">
-                    <div class="info-cell">
-                        <h1>002 | <i>blue</i></h1>
-                        <h2>jun 2020</h2>
-                    </div>
-                    <div>
-                        <h3>vector art <br> 42 x 42 cm</h3>
-                    </div>
-                </a>
-                <a href="#!" class="lightbox" id="002">
-                    <span style="background-image: url('./imagens/digital/002_blue.jpg')"></span>
-                </a>
+                <div class="content  zoom-in">
+                    <a class="zoom-in" href="#002">
+                        <img src="./imagens/digital/low-quality/002_blue.jpg" alt="002">
+                        <div class="info-cell">
+                            <h1>002 | <i>blue</i></h1>
+                            <h2>jun 2020</h2>
+                        </div>
+                        <div>
+                            <h3>vector art <br> 42 x 42 cm</h3>
+                        </div>
+                    </a>
+                    <a href="#!" class="lightbox zoom-out" id="002">
+                        <span style="background-image: url('./imagens/digital/002_blue.jpg')"></span>
+                    </a>
+                </div>
             </div>
             <div class="column-card">
-                <a href="#001">
-                    <img src="./imagens/digital/low-quality/001_orange.jpg" alt="001">
-                    <div class="info-cell">
-                        <h1>001 | <i>orange</i></h1>
-                        <h2>apr 2021</h2>
-                    </div>
-                    <div>
-                        <h3>vector art <br> 42 x 42 cm</h3>
-                    </div>
-                </a>   
-                <a href="#!" class="lightbox" id="001">
-                    <span style="background-image: url('./imagens/digital/001_orange.jpg')"></span>
-                </a>
+                <div class="content  zoom-in">
+                    <a class="zoom-in" href="#001">
+                        <img src="./imagens/digital/low-quality/001_orange.jpg" alt="001">
+                        <div class="info-cell">
+                            <h1>001 | <i>orange</i></h1>
+                            <h2>apr 2021</h2>
+                        </div>
+                        <div>
+                            <h3>vector art <br> 42 x 42 cm</h3>
+                        </div>
+                    </a>   
+                    <a href="#!" class="lightbox zoom-out" id="001">
+                        <span style="background-image: url('./imagens/digital/001_orange.jpg')"></span>
+                    </a>
+                </div>
             </div>
             <div class="column-card">
-                <a href="#000">
-                    <img src="./imagens/digital/low-quality/000_red.jpg" alt="000">
-                    <div class="info-cell">
-                        <h1>000 | <i>red</i></h1>
-                        <h2>jun 2020</h2>
-                    </div>
-                    <div>
-                        <h3>vector art <br> 42 x 42 cm</h3>
-                    </div>
-                </a>
-                <a href="#!" class="lightbox" id="000">
-                    <span style="background-image: url('./imagens/digital/000_red.jpg')"></span>
-                </a>
+                <div class="content  zoom-in">
+                    <a class="zoom-in" href="#000">
+                        <img src="./imagens/digital/low-quality/000_red.jpg" alt="000">
+                        <div class="info-cell">
+                            <h1>000 | <i>red</i></h1>
+                            <h2>jun 2020</h2>
+                        </div>
+                        <div>
+                            <h3>vector art <br> 42 x 42 cm</h3>
+                        </div>
+                    </a>
+                    <a href="#!" class="lightbox zoom-out" id="000">
+                        <span style="background-image: url('./imagens/digital/000_red.jpg')"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
-        <!-- <div id="previous">
-            <a href="./art.html">&#60;</a>
-        </div> -->
     <footer>
         <div class="grid-cell">
             <div class="grid-item"><a href="./architecture.html">architecture</a></div>
             <div class="grid-item"><a href="./art.html">art</a></div>
+            <div class="grid-item"><a href="./photo.html">photo</a></div>
         </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+<script>
+    function resizeGridItem(item) {
+        grid = document.getElementsByClassName("column")[0];
+        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+        rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+        item.style.gridRowEnd = "span " + rowSpan;
+    }
+
+    function resizeAllGridItems() {
+        allItems = document.getElementsByClassName("column-card");
+        for (x = 0; x < allItems.length; x++) {
+            resizeGridItem(allItems[x]);
+        }
+    }
+
+    window.onload = resizeAllGridItems();
+
+    window.addEventListener("resize", resizeAllGridItems);
+
+    allItems = document.getElementsByClassName("column-card");
+    for (x = 0; x < allItems.length; x++) {
+        imagesLoaded(allItems[x], resizeInstance);
+    }
+
+    function resizeInstance(instance) {
+        item = instance.elements[0];
+        resizeGridItem(item);
+    }
+</script>
 
 </html>

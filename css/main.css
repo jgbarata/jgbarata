@@ -65,7 +65,7 @@ footer{
 .grid-cell {
     display: grid;
     width: 20rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-item {
@@ -73,7 +73,7 @@ footer{
     overflow: hidden;
 } 
 
-/* ARCHITECTURE.HTML & ART.HTML */
+/* ARCHITECTURE & ART & PHOTO */
 
 .column{
     display: grid;
@@ -144,9 +144,33 @@ footer{
     grid-template-columns: auto;
 }
 
-/* ART.HTML/000 */ 
+.zoom-in:hover {cursor: zoom-in;}
 
-.show{
+.zoom-out:hover {cursor: zoom-out;}
+
+/*  PHOTO/000 */ 
+
+.column-1{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(1, 1fr);
+    
+    max-width: 720px;
+    
+    margin-bottom: 4rem;
+    margin-top: 3.3rem;
+}
+
+@media screen and (max-width:760px) {
+        .column-1 {
+        max-width: 90vw;
+            grid-template-columns: repeat(1, 1fr);
+    }
+} 
+
+
+
+/* .show{
     padding-top: 3.3rem;
     
     display: flex;
@@ -178,7 +202,7 @@ footer{
 .info-cell-art{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
+} */
 
 /* LIGHTBOX */
 
