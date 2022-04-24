@@ -6,6 +6,7 @@
 *:target{
     outline: none;
 }
+
 /* BODY */
 
 body{
@@ -118,8 +119,12 @@ footer{
     font-style: italic;
 }
 
-.column-card:hover{
+
+.column-card a:hover h1{
     text-decoration: underline;
+    color: rgb(255, 0, 0);
+
+    transition: color 0.5s, font-weight 0.5s;
 }
 
 .info-cell h3:hover{
@@ -168,42 +173,6 @@ footer{
     }
 } 
 
-
-
-/* .show{
-    padding-top: 3.3rem;
-    
-    display: flex;
-    margin: auto;
-    
-    align-content: center;
-    justify-content: center;
-    
-    width: 90vw;
-    height:  85vh;
-}
-
-.show h1,.show h2{
-    font-size: 15pt;
-}
-
-.show i{
-    font-size: 12pt;
-    font-weight: 200;
-    padding-top: 1rem;
-    text-align: center;
-}
-
-.show img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.info-cell-art{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-} */
-
 /* LIGHTBOX */
 
 .lightbox {
@@ -241,7 +210,6 @@ footer{
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 
 /* INDEX.HTML */
 
@@ -291,6 +259,10 @@ footer{
 }
 
 /* ABOUT.HTML */
+
+#about{
+    cursor: context-menu;
+}
 
 .grid{
     display: grid;
