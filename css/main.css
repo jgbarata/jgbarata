@@ -88,6 +88,10 @@ footer{
     margin-top: 3.3rem;
 }
 
+.column-card{
+    min-width: 450px;;
+}
+
 .column-card img{
     width: 100% !important;
     height: auto !important;
