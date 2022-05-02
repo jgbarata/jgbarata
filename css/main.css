@@ -125,12 +125,15 @@ footer{
     font-style: italic;
 }
 
+.column-card a h1, .column-card a i{
+    transition: color 0.5s;
+}
 
-.column-card a:hover h1{
-    text-decoration: underline;
+.column-card a:hover h1, .column-card a:hover  i{
+    text-decoration: none;
     color: rgb(255, 0, 0);
 
-    transition: color 0.5s, font-weight 0.5s;
+    transition: color 0.5s;
 }
 
 .info-cell h3:hover{
@@ -151,7 +154,6 @@ footer{
 
     }
 } 
-
 
 
 .info-cell{
@@ -226,6 +228,62 @@ footer{
     background-size: contain;
 }
 
+/* LODAER */
+
+/* .card{
+    background-color: black;
+
+    width: 100% !important;
+    height: auto !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@-webkit-keyframes square-spin {
+    25% {
+        -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+                transform: perspective(100px) rotateX(180deg) rotateY(0); }
+    50% {
+        -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+                transform: perspective(100px) rotateX(180deg) rotateY(180deg); }
+    75% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+                transform: perspective(100px) rotateX(0) rotateY(180deg); }
+    100% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+                transform: perspective(100px) rotateX(0) rotateY(0); } }
+
+@keyframes square-spin {
+    25% {
+        -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+                transform: perspective(100px) rotateX(180deg) rotateY(0);
+    }
+    50% {
+        -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+                transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+                transform: perspective(100px) rotateX(0) rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+                transform: perspective(100px) rotateX(0) rotateY(0);
+} }
+
+.loader {
+    position:absolute;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+
+    width: 25px;
+    height: 25px;
+    background: red;
+    -webkit-animation: square-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+            animation: square-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite; } */
+
 /* INDEX.HTML */
 
 .container-logo{
@@ -234,6 +292,7 @@ footer{
     min-height: 100vh;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -459,4 +518,107 @@ a:hover{
         #next, #previous {
     padding:1.5rem;
 }
+}
+
+/* DARKMODE */
+/* .container-darkmode{
+    position: absolute;
+    top: 80%;
+}
+
+#dark-mode-toggle{
+    background-color: transparent;
+    width: .7rem;
+    height: .7rem;
+    position: relative;
+    display:inline-block;
+    top: 7.5%;
+    border-radius: .7rem;
+    transition: 0.5s;
+    border: none;
+    outline: black solid 0.15rem;
+}
+
+#dark-mode-toggle div{
+    background-color: black;
+    width: .45rem;
+    height: .7rem;
+    position: absolute;
+    top: 0;
+    border-top-right-radius: .45rem;
+    border-bottom-right-radius: .45rem;
+    transition: 0.5s;
+}
+
+#dark-mode-toggle:hover div {
+    background-color: red;
+    transition: 0.5s;
+}
+
+#dark-mode-toggle:hover {
+    transition: 0.5s;
+    border: none;
+    outline: red solid 0.15rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#dark-mode-toggle::after{
+    content: "off the light";
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200%;
+    font-size: 1rem;
+    opacity: 0%;
+    transition: 0.5s;
+}
+
+#dark-mode-toggle:hover::after {
+    opacity: 100%;
+    transition: 0.5s;
+    color: red;
+} */
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: black;
+    }
+
+    h1,h2,h3,h4,a,i{
+        color: white;
+    }
+
+    .column-card h3,.column-card h4,.grid-card small {
+        color: rgba(255,255,255, 0.4);
+    }
+
+    #header {
+        background-color: black;
+    }
+
+    footer {
+        background-color: black;
+    }
+
+    #logo {
+        background-color: white;
+    }
+
+    /* #dark-mode-toggle{
+        outline: white solid .15rem;
+    }
+
+    #dark-mode-toggle::after {
+        content: 'on the lights';
+        color: white;
+    }
+
+    #dark-mode-toggle div {
+        background-color: white;
+    } */
 }
