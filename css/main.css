@@ -8,7 +8,6 @@
 
     --background: var(--clr-light);
     --foreground: var(--clr-dark);
-    --content: "off";
 }
 
 .darkmode {
@@ -19,7 +18,6 @@
 
     --background: var(--clr-dark);
     --foreground: var(--clr-light);
-    --content: "on";
 }
 
 *{
@@ -98,11 +96,17 @@ footer{
     grid-template-columns: repeat(5, 1fr);
 }
 
-
 .grid-item {
     text-align: center;
-    overflow: hidden;
+    overflow: show;
 } 
+
+@media screen and (max-width:280px){
+    .grid-cell{
+        grid-template-rows: repeat(2, 1fr) ;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /* ARCHITECTURE & ART & PHOTO */
 
@@ -486,26 +490,3 @@ a:hover{
     border-top-left-radius: .44rem;
     border-bottom-left-radius: .44rem;
 }
-
-
-/* #dark-mode-toggle::after{
-    content: var(--content);
-    display: block;
-    white-space: nowrap;
-    position: absolute;
-
-    top: 50%;
-    left: 150%;
-    transform: translateY(-50%);
-    font-size: 1rem;;
-    transition: 0.5s;
-    color: var(--foreground);
-    overflow: visible;
-}
-
-#dark-mode-toggle:hover::after {
-    transition: 0.5s;
-    color: var(--clr-red);
-    font-weight: 500;
-
-} */
