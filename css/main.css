@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
     --clr-light: #ffffff;
@@ -260,7 +260,7 @@ footer{
     background-size: contain;
 }
 
-/* INDEX.HTML */
+/* INDEX */
 
 .container-logo{
     overflow: hidden;
@@ -308,7 +308,7 @@ footer{
 }
 }
 
-/* ABOUT.HTML */
+/* ABOUT */
 
 #about{
     cursor: context-menu;
@@ -400,7 +400,7 @@ footer{
     font-style: italic;
 } */
 
-/* 404.HTML */
+/* 404 */
 
 #not-found{
     display: flex;
