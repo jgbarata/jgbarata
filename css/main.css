@@ -4,7 +4,7 @@
     --clr-light: #ffffff;
     --clr-dark: #000000;
     --clr-red: #ff0000;
-    --clr-grey: #333333;
+    --clr-grey: #999999;
 
     --background: var(--clr-light);
     --foreground: var(--clr-dark);
@@ -13,7 +13,7 @@
 .darkmode {
     --clr-light: #ffffff;
     --clr-dark: #000000;
-    --clr-red: #ff0000;
+    --clr-red:#ff0000;
     --clr-grey: #555555;
 
     --background: var(--clr-dark);
@@ -317,9 +317,9 @@ footer{
 .grid{
     display: grid;
 
-    max-width: 500px;
+    max-width: 750px;
 
-    padding: 5rem 1.5rem 7rem 1.5rem;
+    padding: 5rem 2rem 7rem 2rem;
 
 }
 
@@ -336,9 +336,17 @@ footer{
     justify-content: center;
 }
 
-.grid-card h1, .grid-card h2, .grid-card h3, .grid-card h4, .grid-card a, .grid-card a:hover {
+.grid-card h1, .grid-card h2, .grid-card h3, .grid-card h4, .grid-card a{
     font-size: 1rem;
     font-weight: normal;
+}
+
+.grid-card a{
+        transition: color 0.5s, font-weight 0.1s;
+}
+
+.grid-card a:hover{
+    font-weight: 600;
 }
 
 .grid-card h1{
@@ -358,7 +366,7 @@ footer{
 }
 
 .grid-card h4{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: normal;
 
     text-align: justify;
@@ -366,9 +374,15 @@ footer{
     grid-column: span 2;
 }
 
-.grid-card small{
+.grid-card small,
+.grid-card a:hover small{
     font-size: 0.8rem;
     color: var(--clr-grey);
+    font-weight: normal;
+}
+
+.grid-card h2 small{
+    color: var(--foreground);
 }
 
 .grid-card b{
@@ -379,26 +393,6 @@ footer{
 .red{
     color: var(--clr-red);
 }
-
-
-/* .grid-card h2, .grid-card h3, .grid-card h4{
-    font-weight: 400;
-    text-align: right;
-}
-
-.grid-card h3, .grid-card h4{
-    padding-top: 0.5rem;
-    font-weight: 100;
-    text-align: left;
-
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.grid-card h4{
-    padding-top: 0.25rem;
-
-    font-style: italic;
-} */
 
 /* 404 */
 
@@ -428,7 +422,7 @@ footer{
 }
 
 a{
-    transition: color 0.5s, font-weight 0.5s;
+    transition: color 0.5s, font-weight 0.1s;
 }
 
 a:hover{
