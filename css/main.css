@@ -455,6 +455,35 @@ a:hover{
     /* Firefox */
 }
 
+/* EASTEEGG */
+
+#duck {
+    height: 1.5rem;
+    width: 1.5rem;
+
+    background-color: var(--foreground);
+    opacity: 1%;
+    -webkit-mask-image: url(../imagens/all/duck.svg);
+    mask-image: url(../imagens/all/duck.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 2;
+    transition: ease 0.5s;
+}
+
+#duck:hover {
+    background-color: var(--clr-red);
+    opacity: 100%;
+    -webkit-mask-image: url(../imagens/all/duck.svg);
+    mask-image: url(../imagens/all/duck.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
 /* DARKMODE */
 
 #dark-mode-toggle{
