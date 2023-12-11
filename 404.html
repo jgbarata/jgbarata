@@ -14,33 +14,45 @@
     <title>jgbarata | 404 error</title>
 </head>
 <body>
-    <header id="header">
-        <a id="home" href="https://jgbarata.xyz">jg<samp id="barata">barata</samp></a>
+    <header>
+        <nav>
+            <div class="logo">
+                <input type="checkbox" id="menu-button">
+                <label id="btn" for="menu-button">
+                    <div class="container">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </label>
+                <a id="home" href="./index">jg<samp id="barata">barata</samp></a>
+            </div>
+            <div class="nav-box">
+                <ul>
+                    <li>
+                        <a class="link-selected" href="#">about</a>
+                    </li>
+                    <li>
+                        <a href="./architecture">architecture</a>
+                    </li>
+                    <li>
+                        <a href="./art">art</a>
+                    </li>
+                    <li>
+                        <a href="./photo">photo</a>
+                    </li>
+                    <li id="li-dark-mode">
+                        <button id="dark-mode-toggle" class="dark-mode-toggle">
+                            <div></div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main id="not-found">
         <h1 id="error-404"><b>404</b><br>page not found</h1>
     </main>
-<footer>
-    <div class="grid-cell">
-        <div class="grid-item">
-            <a href="./about">about</a>
-        </div>
-        <div class="grid-item">
-            <a href="./architecture">architecture</a>
-        </div>
-        <div class="grid-item">
-            <a href="./art">art</a>
-        </div>
-        <div class="grid-item">
-            <a href="./photo">photo</a>
-        </div>
-        <div class="grid-item">
-            <button id="dark-mode-toggle" class="dark-mode-toggle">
-                <div></div>
-            </button>
-        <div>
-    </div>
-</footer>
 <script src="./js/darkmode.js"></script>
 </body>
 </html>

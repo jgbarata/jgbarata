@@ -40,23 +40,16 @@ body{
     color: var(--foreground);
 }
 
-/* HEADER */
+/* NAV BAR */
 
-#header{
-    position: absolute;
+.logo{
+    position: fixed;
     left: 0;
     top: 0;
 
-    z-index: 1;
+    z-index: 101;
 
-    font-size: 2rem;
-    text-align: left;
-    padding: 0.5rem 0 1rem 1rem;
-    background-color: var(--background);
-
-    min-width: 100vw;
-
-    transition: top 0.5s;
+    padding: .5rem 0 1rem 2rem;
 }
 
 #barata{
@@ -66,51 +59,73 @@ body{
     font-weight: bold;
 }
 
+#home{
+    position: absolute;
+}
 
 #home:hover{
     text-decoration: none;
 }
 
-@media screen and (max-width:280px) {
-    #header {
-            font-size: 1.5rem;
-        }
+@media screen and (max-width:1420px) {
+    #home {
+        left: 5rem;
+    }
+
+    .logo {
+        height: 3.3rem;
+        background-color: var(--background);
+        min-width: 100vw;
+    }
 }
 
-/* FOOTER */
+/* MENU BUTTON */
 
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-
-    display: flex;
-    justify-content: center;
-
-    width: 100vw;
-    padding: 1rem 0 1.5rem 0;
-
-    background-color: var(--background);
-    text-align: center;
-
-    font-size: 1rem;
+#menu-button{
+    display: none;
 }
 
-.grid-cell {
-    display: grid;
-    width: 30rem;
-    grid-template-columns: repeat(5, 1fr);
+.container {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: .8rem;
+    transition: 0.5s;
 }
 
-.grid-item {
-    text-align: center;
-    overflow: show;
-} 
+.container:hover{
+    transform: scale(110%)
+}
 
-@media screen and (max-width:280px){
-    .grid-cell{
-        grid-template-rows: repeat(2, 1fr) ;
-        grid-template-columns: repeat(3, 1fr);
+#btn:hover .bar1,#btn:hover .bar2,#btn:hover .bar3{
+    background-color: var(--clr-red);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 1.75rem;
+    height: .25rem;
+    background-color: var(--foreground);
+    margin: .25rem 0 0 0;
+    transition: 0.4s;
+}
+
+#menu-button:checked + label .bar1 {
+    transform: translate(0,.5rem) rotate(-45deg);
+}
+
+#menu-button:checked + label .bar2 {
+    opacity: 0;
+}
+
+#menu-button:checked + label .bar3 {
+    transform: translate(0,-0.5rem) rotate(45deg);
+}
+
+@media screen and (max-width:1420px) {
+    .container{
+        display: inline-block;
     }
 }
 
@@ -132,11 +147,13 @@ footer{
     text-align: left;
 
     font-size: 2rem;
+    z-index: 100;
 }
 
 .nav-box ul{
     list-style: none;
-    padding: 0rem 0rem 0rem 2rem;
+    padding-left: 2rem;
+    padding-top: 4.5rem;
 
 }
 
@@ -145,8 +162,7 @@ footer{
     transition: font-size 0.1s;
 }
 
-#li-home{
-    padding: 0 0 2rem 0;
+#home{
     font-size: 2.5rem
 }
 
@@ -159,30 +175,15 @@ footer{
         font-size: 1.5rem;
         transition: font-size 0.1s;
     }
-    #li-home {
+    #home {
         font-size: 2rem
     }
 }
 @media screen and (max-width:1420px) {
-    .nav-box {
-            position: fixed;
-            justify-content: left;
-    
-            width: 100vw;
-            max-width: 100vw;
-            height: 3rem;
-            padding: 1rem 0 1.5rem 0;
-    
-            background-color: grey;
-            text-align: center;
-    
-            font-size: 1.5rem;
-    }
-        .nav-box {
-            transition: none;
-        }
-    .nav-box ul{
-        visibility: hidden;
+    .nav-box{
+        width: 250px;
+        background-color: var(--background);
+        display: none;
     }
 }
 
@@ -206,9 +207,9 @@ main{
     
     max-width: 80vw;
 
-    
     margin-bottom: 4rem;
     margin-top: 3.3rem;
+    z-index: 0;
 }
 
 .column-card{
@@ -219,6 +220,7 @@ main{
     width: 100% !important;
     height: auto !important;
 } 
+
 
 .column-card a:hover img{
     -webkit-filter: grayscale(100%);
@@ -267,7 +269,7 @@ main{
     transition: color 0.5s;
 }
 
-.column-card a:hover h1, .column-card a:hover  i{
+.column-card a:hover h1, .column-card a:hover i{
     text-decoration: none;
     color: var(--clr-red);
 
@@ -279,6 +281,18 @@ main{
     color: var(--foreground);
 }
 
+@media screen and (min-width:2550px) {
+    .column {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width:3500px) {
+    .column {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
 @media screen and (max-width:1420px) {
     .column{
         max-width: 90vw;
@@ -286,7 +300,6 @@ main{
     }
     .column-card {
             min-width: 27vw;
-    
         }
 }
 
@@ -295,10 +308,8 @@ main{
         max-width: 90vw;
         grid-template-columns: repeat(2, 1fr);
     }
-
     .column-card {
         min-width: 43vw;
-
     }
 }
 
@@ -439,6 +450,31 @@ main{
 #about{
     cursor: context-menu;
 }
+
+.fixed {
+    position: absolute;
+    top: 110vh;
+    /* defined when the element will appear */
+    /* bottom: 0;
+    left: 0;
+    right: 0; */
+    /* needed to push the sticky element down */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /*fading*/
+    -webkit-mask: linear-gradient(to bottom, transparent, #fff 200px);
+    mask: linear-gradient(to bottom, transparent, #fff 200px);
+}
+
+/* .fixed{ */
+    /* stick to the bottom */
+    /* position: sticky;
+    bottom: 0;
+
+    padding: 15px;
+    text-align: center;
+} */
 
 .grid{
     display: grid;
@@ -623,7 +659,7 @@ a:hover{
     border: none;
     outline: var(--foreground) solid 0.15rem;
     overflow: visible;
-    transition: 0.5s;
+    transition:0.5s;
 }
 
 #dark-mode-toggle:hover {
@@ -643,7 +679,6 @@ a:hover{
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     transition: 0.5s;
-
 }
 
 #dark-mode-toggle:hover div {
