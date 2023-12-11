@@ -12,78 +12,43 @@
     
     <title>jgbarata</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <input type="checkbox" id="menu-button">
-                <label id="btn" for="menu-button">
-                    <div class="container">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </label>
-                <a id="home" href="./index">jg<samp id="barata">barata</samp></a>
-            </div>
-            <div class="nav-box">
-                <ul>
-                    <li>
-                        <a href="./about">about</a>
-                    </li>
-                    <li>
-                        <a href="./architecture">architecture</a>
-                    </li>
-                    <li>
-                        <a href="./art">art</a>
-                    </li>
-                    <li>
-                        <a href="./photo">photo</a>
-                    </li>
-                    <li id="li-dark-mode">
-                        <button id="dark-mode-toggle" class="dark-mode-toggle">
-                            <div></div>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+<body class="overflow">
+    <header class="nav-bar">
+        <a id="home" href="./index">jg<samp id="barata">barata</samp></a>
+        <input type="checkbox" id="menu-button" class="nav-toggle">
+        <nav class="nav-box">
+            <ul>
+                <li>
+                    <a href="./about">about</a>
+                </li>
+                <li>
+                    <a href="./architecture">architecture</a>
+                </li>
+                <li>
+                    <a href="./art">art</a>
+                </li>
+                <li>
+                    <a href="./photo">photo</a>
+                </li>
+                <li id="li-dark-mode">
+                    <button id="dark-mode-toggle" class="dark-mode-toggle">
+                        <div></div>
+                    </button>
+                </li>
+            </ul>
         </nav>
+        <label id="btn" for="menu-button">
+            <div class="container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </label>
     </header>
     <main class="container-logo">
         <a href="about">
             <div id ="logo"></div>
         </a>
-        <div class="grid fixed">
-            <div class="grid-card">
-                <h1>hello there<samp>.</samp> </h1>
-                <h4>my name is josé guilherme barata and i'm an architecture student.</h4>
-                <h4>in here you can comprehend a little of what i like to do and see what i have accomplished so far.</h4>
-            </div>
-            <div class="grid-card">
-                    <h1>info<samp>.</samp></h1>
-                    <h2>from</h2>
-                    <h3><a href="https://www.google.com/maps/place/Lisboa,+Portugal/@38.7435434,-9.2999431,11z/data=!3m1!4b1!4m5!3m4!1s0xd19331a61e4f33b:0x400ebbde49036d0!8m2!3d38.7222524!4d-9.1393366" target="_blank">lisbon, portugal</a></h3>
-                    <h2>email</h2>
-                    <h3><a href="mailto: jguilhermefb@gmail.com" class="right">jguilhermefb@gmail.com</a></h3>
-                    <h2>instagram</h2>
-                    <h3><a href="https://www.instagram.com/jgbarata/" target="_blank" class="right">@jgbarata</a></h3>
-                    <br>
-                    <h3><a href="https://www.instagram.com/jgbarata.art/" target="_blank" class="right">@jgbarata.art</a></h3>
-            </div>
-            <div class="grid-card">
-                <h1>studies<samp>.</samp></h1>
-                <h2><small>spring</small> 2022 - <small>summer</small> 2022</h2>
-                <h3><a href="https://www.unisa.it/" target="_blank" class="right">università degli studi di salerno <br><small>erasmus</small></a></h3>
-                <h2><small>autumn</small> 2018 - <small>autumn</small> 2023 </h2>
-                <h3><a href="https://www.iscte-iul.pt" target="_blank" class="right">iscte - iul <br><small>integrated masters in architecture</small>
-                </a></h3>
-            </div>
-            <!-- <div class="grid-card">
-                <h1>experience<samp>.</samp></h1>
-                <h2>2020</h2>
-                <h3>fidalgo mineiro-arquitectos<br><small>intern</small></h3>
-            </div> -->
-        </div>
     </main>
     <script src="./js/darkmode.js"></script>
 </body>

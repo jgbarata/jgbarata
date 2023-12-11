@@ -40,9 +40,13 @@ body{
     color: var(--foreground);
 }
 
+.overflow{
+    overflow: hidden;
+}
+
 /* NAV BAR */
 
-.logo{
+.nav-bar{
     position: fixed;
     left: 0;
     top: 0;
@@ -72,7 +76,7 @@ body{
         left: 5rem;
     }
 
-    .logo {
+    .nav-bar {
         height: 3.3rem;
         background-color: var(--background);
         min-width: 100vw;
@@ -111,15 +115,15 @@ body{
     transition: 0.4s;
 }
 
-#menu-button:checked + label .bar1 {
+#menu-button:checked ~ label .bar1 {
     transform: translate(0,.5rem) rotate(-45deg);
 }
 
-#menu-button:checked + label .bar2 {
+#menu-button:checked ~ label .bar2 {
     opacity: 0;
 }
 
-#menu-button:checked + label .bar3 {
+#menu-button:checked ~ label .bar3 {
     transform: translate(0,-0.5rem) rotate(45deg);
 }
 
@@ -183,8 +187,15 @@ body{
     .nav-box{
         width: 250px;
         background-color: var(--background);
-        display: none;
+
+        z-index: -10;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
     }
+}
+
+#menu-button:checked~nav {
+    transform: translateX(0%);
 }
 
 /* ARCHITECTURE & ART & PHOTO */
@@ -346,18 +357,19 @@ main{
     gap: 4rem;
     grid-template-columns: repeat(1, 1fr);
     
-    max-width: 720px;
+    max-width: 50vw;
     
     margin-bottom: 4rem;
     margin-top: 3.3rem;
 }
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:700px) {
         .column-1 {
         max-width: 90vw;
             grid-template-columns: repeat(1, 1fr);
     }
 } 
+
 
 /* LIGHTBOX */
 
@@ -402,7 +414,7 @@ main{
 .container-logo{
     overflow: hidden;
 
-    min-height: 100vh;
+    min-height:100vh;
 
     display: flex;
     flex-direction: column;
@@ -450,31 +462,6 @@ main{
 #about{
     cursor: context-menu;
 }
-
-.fixed {
-    position: absolute;
-    top: 110vh;
-    /* defined when the element will appear */
-    /* bottom: 0;
-    left: 0;
-    right: 0; */
-    /* needed to push the sticky element down */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    /*fading*/
-    -webkit-mask: linear-gradient(to bottom, transparent, #fff 200px);
-    mask: linear-gradient(to bottom, transparent, #fff 200px);
-}
-
-/* .fixed{ */
-    /* stick to the bottom */
-    /* position: sticky;
-    bottom: 0;
-
-    padding: 15px;
-    text-align: center;
-} */
 
 .grid{
     display: grid;
@@ -619,20 +606,23 @@ a:hover{
 
 /* EASTEEGG */
 
+#duckbox{
+    flex: content;
+}
+
 #duck {
     height: 1.5rem;
     width: 1.5rem;
 
     background-color: var(--foreground);
-    opacity: 1%;
+    opacity: 100%;
     -webkit-mask-image: url(../imagens/all/duck.svg);
     mask-image: url(../imagens/all/duck.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 
-    position: fixed;
-    top: 5%;
-    left: 5%;
+    position: absolute;
+    padding-top: 1rem;
     z-index: 2;
     transition: ease 0.5s;
 }

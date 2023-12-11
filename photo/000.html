@@ -14,41 +14,37 @@
     <title>jgbarata | photo | 000</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <input type="checkbox" id="menu-button">
-                <label id="btn" for="menu-button">
-                    <div class="container">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </label>
-                <a id="home" href="../index">jg<samp id="barata">barata</samp></a>
-            </div>
-            <div class="nav-box">
-                <ul>
-                    <li>
-                        <a class="link-selected" href="#">about</a>
-                    </li>
-                    <li>
-                        <a href="../architecture">architecture</a>
-                    </li>
-                    <li>
-                        <a href="../art">art</a>
-                    </li>
-                    <li>
-                        <a href="../photo">photo</a>
-                    </li>
-                    <li id="li-dark-mode">
-                        <button id="dark-mode-toggle" class="dark-mode-toggle">
-                            <div></div>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+    <header class="nav-bar">
+        <a id="home" href="../index">jg<samp id="barata">barata</samp></a>
+        <input type="checkbox" id="menu-button" class="nav-toggle">
+        <nav class="nav-box">
+            <ul>
+                <li>
+                    <a href="../about">about</a>
+                </li>
+                <li>
+                    <a href="../architecture">architecture</a>
+                </li>
+                <li>
+                    <a href="../art">art</a>
+                </li>
+                <li>
+                    <a class="link-selected" href="../photo">photo</a>
+                </li>
+                <li id="li-dark-mode">
+                    <button id="dark-mode-toggle" class="dark-mode-toggle">
+                        <div></div>
+                    </button>
+                </li>
+            </ul>
         </nav>
+        <label id="btn" for="menu-button">
+            <div class="container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </label>
     </header>
     <main>
         <div class="column-1">
@@ -124,7 +120,8 @@
                     <span style="background-image: url('../imagens/photo/000/008.jpg')"></span>
                 </a>
             </div>
-            <div class="column-card">
+            <div id="duckbox" class="column-card">
+                    <a id="duck" href="https://www.instagram.com/diconium_duck/" target="_blank"></a>
                 <a class="zoom-in" href="#009">
                     <img width="683" height="1024" src="../imagens/photo/000/009.jpg" alt="009" loading="lazy">
                 </a>
@@ -141,7 +138,6 @@
                 </a>
             </div>
         </div>
-        <a id="duck" href="https://www.instagram.com/diconium_duck/" target="_blank"></a>
     </main>
     <script src="../js/darkmode.js"></script>
 </body>

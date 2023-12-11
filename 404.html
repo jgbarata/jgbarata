@@ -13,42 +13,38 @@
 
     <title>jgbarata | 404 error</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <input type="checkbox" id="menu-button">
-                <label id="btn" for="menu-button">
-                    <div class="container">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </label>
-                <a id="home" href="./index">jg<samp id="barata">barata</samp></a>
-            </div>
-            <div class="nav-box">
-                <ul>
-                    <li>
-                        <a class="link-selected" href="#">about</a>
-                    </li>
-                    <li>
-                        <a href="./architecture">architecture</a>
-                    </li>
-                    <li>
-                        <a href="./art">art</a>
-                    </li>
-                    <li>
-                        <a href="./photo">photo</a>
-                    </li>
-                    <li id="li-dark-mode">
-                        <button id="dark-mode-toggle" class="dark-mode-toggle">
-                            <div></div>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+<body class="overflow">
+    <header class="nav-bar">
+        <a id="home" href="./index">jg<samp id="barata">barata</samp></a>
+        <input type="checkbox" id="menu-button" class="nav-toggle">
+        <nav class="nav-box">
+            <ul>
+                <li>
+                    <a href="./about">about</a>
+                </li>
+                <li>
+                    <a href="./architecture">architecture</a>
+                </li>
+                <li>
+                    <a href="./art">art</a>
+                </li>
+                <li>
+                    <a href="./photo">photo</a>
+                </li>
+                <li id="li-dark-mode">
+                    <button id="dark-mode-toggle" class="dark-mode-toggle">
+                        <div></div>
+                    </button>
+                </li>
+            </ul>
         </nav>
+        <label id="btn" for="menu-button">
+            <div class="container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </label>
     </header>
     <main id="not-found">
         <h1 id="error-404"><b>404</b><br>page not found</h1>
