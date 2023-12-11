@@ -2,7 +2,7 @@
 
 :root {
     --clr-light: #ffffff;
-    --clr-dark: #000000;
+    --clr-dark: #0A0A0A;
     --clr-red: #ff0000;
     --clr-grey: #999999;
 
@@ -12,7 +12,7 @@
 
 .darkmode {
     --clr-light: #ffffff;
-    --clr-dark: #000000;
+    --clr-dark: #0A0A0A;
     --clr-red:#ff0000;
     --clr-grey: #555555;
 
@@ -49,9 +49,9 @@ body{
 
     z-index: 1;
 
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 0.5rem 0 1rem 0;
+    font-size: 2rem;
+    text-align: left;
+    padding: 0.5rem 0 1rem 1rem;
     background-color: var(--background);
 
     min-width: 100vw;
@@ -69,6 +69,12 @@ body{
 
 #home:hover{
     text-decoration: none;
+}
+
+@media screen and (max-width:280px) {
+    #header {
+            font-size: 1.5rem;
+        }
 }
 
 /* FOOTER */
@@ -108,28 +114,121 @@ footer{
     }
 }
 
+/* NAV */
+
+.nav-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: left;
+
+    width: 15vw;
+    max-width: 300px;
+    height: 100vh;
+    padding: 0.5rem 0 1.5rem 0;
+
+    text-align: left;
+
+    font-size: 2rem;
+}
+
+.nav-box ul{
+    list-style: none;
+    padding: 0rem 0rem 0rem 2rem;
+
+}
+
+.nav-box li{
+    padding: .5rem 0 0 0;
+    transition: font-size 0.1s;
+}
+
+#li-home{
+    padding: 0 0 2rem 0;
+    font-size: 2.5rem
+}
+
+#li-dark-mode{
+    padding: 2rem 0 0 0;
+}
+
+@media screen and (max-width:1520px) {
+    .nav-box {
+        font-size: 1.5rem;
+        transition: font-size 0.1s;
+    }
+    #li-home {
+        font-size: 2rem
+    }
+}
+@media screen and (max-width:1420px) {
+    .nav-box {
+            position: fixed;
+            justify-content: left;
+    
+            width: 100vw;
+            max-width: 100vw;
+            height: 3rem;
+            padding: 1rem 0 1.5rem 0;
+    
+            background-color: grey;
+            text-align: center;
+    
+            font-size: 1.5rem;
+    }
+        .nav-box {
+            transition: none;
+        }
+    .nav-box ul{
+        visibility: hidden;
+    }
+}
+
 /* ARCHITECTURE & ART & PHOTO */
+
+main{
+    margin-left: 15vw;
+}
+
+@media screen and (max-width:1420px) {
+    main {
+        margin-left: 0vw;
+    }
+}
 
 .column{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1rem;
     
-    max-width: 900px;
+    max-width: 80vw;
+
     
     margin-bottom: 4rem;
     margin-top: 3.3rem;
 }
 
 .column-card{
-    min-width: 450px;
+    min-width: 300px;
 }
 
 .column-card img{
     width: 100% !important;
     height: auto !important;
 } 
+
+.column-card a:hover img{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+
+    transition: filter 0.5s;
+}
 
 .column-card h1, .show h1, .column-card h2, .show h2, .column-card h3, .column-card h4{
     padding-top: 1rem;
@@ -157,6 +256,13 @@ footer{
     font-style: italic;
 }
 
+.column-card h5 {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: justify;
+}
+
 .column-card a h1, .column-card a i{
     transition: color 0.5s;
 }
@@ -173,19 +279,39 @@ footer{
     color: var(--foreground);
 }
 
-@media screen and (max-width:940px) {
+@media screen and (max-width:1420px) {
+    .column{
+        max-width: 90vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .column-card {
+            min-width: 27vw;
+    
+        }
+}
+
+@media screen and (max-width:1000px) {
+    .column {
+        max-width: 90vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .column-card {
+        min-width: 43vw;
+
+    }
+}
+
+@media screen and (max-width:700px) {
         .column {
         max-width: 90vw;
             grid-template-columns: repeat(1, 1fr);
     }
-} 
-
-@media screen and (max-width:940px) {
         .column-card {
-        min-width: 90vw;
-
-    }
-} 
+            min-width: 90vw;
+    
+        }
+}  
 
 
 .info-cell{
@@ -488,43 +614,43 @@ a:hover{
 
 #dark-mode-toggle{
     background-color: transparent;
-    width: .7rem;
-    height: .7rem;
+    width: 1rem;
+    height: 1rem;
     position: relative;
     display:inline-block;
     bottom: 15%;
-    border-radius: .7rem;
+    border-radius: 1rem;
     border: none;
-    outline: var(--foreground) solid 0.1rem;
-    transition: 0.5s;
+    outline: var(--foreground) solid 0.15rem;
     overflow: visible;
+    transition: 0.5s;
 }
 
 #dark-mode-toggle:hover {
-    transition: 0.5s;
     border: none;
-    outline: var(--clr-red) solid 0.15rem;
+    outline: var(--clr-red) solid 0.2rem;
     font-weight: normal;
     cursor: pointer;
 }
 
 #dark-mode-toggle div{
     background-color: var(--foreground);
-    width: .44rem;
-    height: .7rem;
+    width: 0.5rem;
+    height: 1rem;
     position: absolute;
     top: 0;
-    border-top-right-radius: .44rem;
-    border-bottom-right-radius: .44rem;
+    right: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     transition: 0.5s;
+
 }
 
 #dark-mode-toggle:hover div {
     background-color: var(--clr-red);
-    transition: 0.5s;
     transform: translateX(-100%);
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-top-left-radius: .44rem;
-    border-bottom-left-radius: .44rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
 }
