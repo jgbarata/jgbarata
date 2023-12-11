@@ -65,6 +65,7 @@ body{
 
 #home{
     position: absolute;
+    z-index: 200;
 }
 
 #home:hover{
