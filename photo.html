@@ -51,7 +51,7 @@
                 <div class="column-card">
                     <div class="content">
                         <a href="./photo/001">
-                            <img width="683" height="1024" src="./imagens/photo/low-quality/001.jpg" alt="001" loading="lazy">
+                            <img src="./imagens/photo/low-quality/001.jpg" alt="001">
                             <div class="info-cell">
                                 <h1>001 | <i>biblioteca tecnico scientifico</i></h1>
                                 <h2>jun 2022</h2>
@@ -66,7 +66,7 @@
                 <div class="column-card">
                     <div class="content">
                         <a href="./photo/000">
-                            <img width="683" height="1024" src="./imagens/photo/low-quality/000.jpg" alt="000" loading="lazy">
+                            <img src="./imagens/photo/low-quality/000.jpg" alt="000">
                             <div class="info-cell">
                                 <h1>000 | <i>cimitero di san cataldo</i></h1>
                                 <h2>apr 2022</h2>
@@ -113,5 +113,20 @@
             resizeGridItem(item);
         }
     </script>
-    
+    <svg class="svg-filters">
+        <filter id="filter-white-mode" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+                            .33 .33 .33 0 0
+                            .33 .33 .33 0 0
+                            0 0 0 1 0" in="SourceGraphic" result="colormatrix" />
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.86 1" />
+                <feFuncG type="table" tableValues="0.23 0.99" />
+                <feFuncB type="table" tableValues="0.2 0.98" />
+                <feFuncA type="table" tableValues="0 1" />
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend" />
+        </filter>
+    </svg>
     </html>

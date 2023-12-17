@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
-    --clr-light: #ffffff;
-    --clr-dark: #0A0A0A;
-    --clr-red: #ff0000;
-    --clr-grey: #999999;
-
-    --background: var(--clr-light);
-    --foreground: var(--clr-dark);
-}
-
-.darkmode {
-    --clr-light: #ffffff;
-    --clr-dark: #0A0A0A;
-    --clr-red:#ff0000;
-    --clr-grey: #555555;
+    --clr-light: #fffdfa;
+    --clr-dark: #084c61;
+    --clr-red: #db3a34;
+    --clr-grey: #84A5AE;
 
     --background: var(--clr-dark);
     --foreground: var(--clr-light);
+}
+
+.darkmode {
+    --clr-light: #fffdfa;
+    --clr-dark: #084C61;
+    --clr-red:#db3a34;
+    --clr-grey: #467988;
+
+    --background: var(--clr-light);
+        --foreground: var(--clr-dark);
 }
 
 *{
@@ -41,6 +41,7 @@ body{
 }
 
 .overflow{
+    height: 100%;
     overflow: hidden;
 }
 
@@ -57,10 +58,12 @@ body{
 }
 
 #barata{
-    transition: font-weight 0.5s;
-
-    color:var(--clr-red);
     font-weight: bold;
+    transition: color 0.5s;
+}
+
+#home:hover #barata{
+    color: var(--clr-red);
 }
 
 #home{
@@ -95,7 +98,7 @@ body{
     cursor: pointer;
     position: absolute;
     top: .8rem;
-    transition: 0.5s;
+    transition: transform 0.1s;
 }
 
 .container:hover{
@@ -167,6 +170,22 @@ body{
     transition: font-size 0.1s;
 }
 
+.nav-box a{
+    transition: padding-left 0.25s;
+}
+
+.nav-box a:hover{
+    padding-left: .5rem;
+}
+
+.nav-box li .link-selected{
+    padding-left: .5rem;
+}
+
+.nav-box li .link-selected:hover {
+    padding-left: .7rem;
+}
+
 #home{
     font-size: 2.5rem
 }
@@ -195,11 +214,20 @@ body{
     }
 }
 
-#menu-button:checked~nav {
+#menu-button:checked ~ nav {
     transform: translateX(0%);
 }
 
 /* ARCHITECTURE & ART & PHOTO */
+
+.svg-filters {
+    height: 0;
+    left: -9999em;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 0;
+}
 
 main{
     margin-left: 15vw;
@@ -233,15 +261,12 @@ main{
     height: auto !important;
 } 
 
-
 .column-card a:hover img{
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: gray;
+    filter:url(#filter-white-mode);
+}
 
-    transition: filter 0.5s;
+.column-card a:hover h1{
+    font-weight: 600;
 }
 
 .column-card h1, .show h1, .column-card h2, .show h2, .column-card h3, .column-card h4{
@@ -249,6 +274,7 @@ main{
     font-size: 1rem;
     font-weight: 500;
     text-align: left;
+    transition: font-weight 0.1s;
 }
 
 .column-card h2, .show h2, .column-card h3, .column-card h4{
@@ -336,7 +362,6 @@ main{
         }
 }  
 
-
 .info-cell{
     display: grid;
     grid-template-columns: auto auto;
@@ -358,13 +383,13 @@ main{
     gap: 4rem;
     grid-template-columns: repeat(1, 1fr);
     
-    max-width: 50vw;
+    max-width: 720px;
     
     margin-bottom: 4rem;
     margin-top: 3.3rem;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:850px) {
         .column-1 {
         max-width: 90vw;
             grid-template-columns: repeat(1, 1fr);
@@ -390,7 +415,7 @@ main{
     padding: 1em;
 
   /* Translucent background */
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 /* Unhide the lightbox when it's the target */
@@ -501,12 +526,11 @@ main{
 
 .grid-card h1{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
 
     text-align: left;
 
-    grid-column: span 2;
-    color: var(--clr-red);
+    grid-column: span 2;;
 }
 
 .grid-card h3,.grid-card a, .grid-card a:hover{
@@ -650,7 +674,7 @@ a:hover{
     border: none;
     outline: var(--foreground) solid 0.15rem;
     overflow: visible;
-    transition:0.5s;
+    transition:0.1s;
 }
 
 #dark-mode-toggle:hover {
@@ -669,7 +693,7 @@ a:hover{
     right: 0;
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    transition: 0.5s;
+    transition:  0.1s;
 }
 
 #dark-mode-toggle:hover div {
