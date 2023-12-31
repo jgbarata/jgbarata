@@ -47,12 +47,51 @@
             </div>
         </label>
     </header>
-    <main id="not-found">
-        <a href="../architecture">
-            <h1 id="error-404"><b>005</b><br>metric house</h1>
-        </a>
+    <main>
+        <div class="column-1">
+            <div class="column-card">
+                <a class="zoom-in" href="#000">
+                    <img src="../imagens/architecture/005/000.jpg" alt="000">
+                </a>
+                <a href="#!" class="lightbox zoom-out" id="000">
+                    <span style="background-image: url('../imagens/architecture/005/000.jpg')"></span>
+                </a>
+            </div>
+            <div class="column-card">
+                <a class="zoom-in" href="#001">
+                    <img src="../imagens/architecture/005/001.jpg" alt="001">
+                </a>
+                <a href="#!" class="lightbox zoom-out" id="001">
+                    <span style="background-image: url('../imagens/architecture/005/001.jpg')"></span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="arrow_1">
+                <a href="../architecture/004">&#60;</a>
+            </div>
+            <div class="arrow_2">
+                <a href="../architecture/006">&#62;</a>
+            </div>
+        </div>
     </main>
     <script src="../js/darkmode.js"></script>
-</body>
-
-</html>
+    <script src="../js/galleryopen.js"></script>
+    </body>
+    <svg class="svg-filters">
+        <filter id="filter-white-mode" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox"
+            primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+                                            .33 .33 .33 0 0
+                                            .33 .33 .33 0 0
+                                            0 0 0 1 0" in="SourceGraphic" result="colormatrix" />
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.86 1" />
+                <feFuncG type="table" tableValues="0.23 0.99" />
+                <feFuncB type="table" tableValues="0.2 0.98" />
+                <feFuncA type="table" tableValues="0 1" />
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend" />
+        </filter>
+    </svg>
+    </html>

@@ -1,4 +1,4 @@
-const OverflowToggles = document.querySelectorAll('.column-card');
+const OverflowToggles = document.querySelectorAll('.column-card a');
 
 const enableOverflow = () => {
   document.body.classList.add('overflow');

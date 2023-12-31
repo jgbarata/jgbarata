@@ -233,27 +233,76 @@ main{
     margin-left: 15vw;
 }
 
+
+.arrow_1, .arrow_2 {
+    margin-left: 15vw;
+    position: fixed;
+    font-size: 3rem;
+    bottom: 1rem;
+    z-index: 100;
+}
+
+.arrow_1{
+    left: 10%;
+}
+
+.arrow_2 {
+    right: 10%;
+}
+
 @media screen and (max-width:1420px) {
-    main {
+    main, .arrow_1, .arrow_2 {
         margin-left: 0vw;
     }
 }
 
 .column{
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1rem;
-    
-    max-width: 80vw;
-
     margin-bottom: 4rem;
     margin-top: 3.3rem;
     z-index: 0;
+
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1.5rem;
+    -moz-column-count: 3;
+    -moz-column-gap: 1.5rem;
+    column-count: 3;
+    column-gap: 1.5rem;
+
+    max-width: 80vw;
+}
+
+.column-06{
+    display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+}
+
+.column-03{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.column-02 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.column-01{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.column-02 .item-1 {
+    grid-row: span 2 ;
 }
 
 .column-card{
     min-width: 300px;
+    break-inside: avoid-column;
+    padding-bottom: 3rem;
 }
 
 .column-card img{
@@ -321,20 +370,26 @@ main{
 
 @media screen and (min-width:2550px) {
     .column {
-        grid-template-columns: repeat(4, 1fr);
+            -webkit-column-count: 4;
+                -moz-column-count: 4;
+                column-count: 4;
     }
 }
 
 @media screen and (min-width:3500px) {
     .column {
-        grid-template-columns: repeat(5, 1fr);
+            -webkit-column-count: 5;
+                -moz-column-count: 5;
+                column-count: 5;
     }
 }
 
 @media screen and (max-width:1420px) {
     .column{
         max-width: 90vw;
-        grid-template-columns: repeat(3, 1fr);
+            -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
     }
     .column-card {
             min-width: 27vw;
@@ -344,7 +399,9 @@ main{
 @media screen and (max-width:1000px) {
     .column {
         max-width: 90vw;
-        grid-template-columns: repeat(2, 1fr);
+            -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
     }
     .column-card {
         min-width: 43vw;
@@ -354,11 +411,17 @@ main{
 @media screen and (max-width:700px) {
         .column {
         max-width: 90vw;
-            grid-template-columns: repeat(1, 1fr);
+            -webkit-column-count: 1;
+                -moz-column-count: 1;
+                column-count: 1;
     }
         .column-card {
             min-width: 90vw;
+            padding-bottom: 5vw;
     
+        }
+        .column-06, .column-02, .column-01, .column-03{
+            gap: 1.5vw;
         }
 }  
 
@@ -380,7 +443,6 @@ main{
 
 .column-1{
     display: grid;
-    gap: 4rem;
     grid-template-columns: repeat(1, 1fr);
     
     max-width: 720px;

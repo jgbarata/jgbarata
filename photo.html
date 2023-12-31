@@ -49,7 +49,6 @@
         <main>
             <div class="column">
                 <div class="column-card">
-                    <div class="content">
                         <a href="./photo/001">
                             <img src="./imagens/photo/low-quality/001.jpg" alt="001">
                             <div class="info-cell">
@@ -61,10 +60,8 @@
                                 <h4>fisciano, campania, italy</h4>
                             </div>
                         </a>
-                    </div>
                 </div>
                 <div class="column-card">
-                    <div class="content">
                         <a href="./photo/000">
                             <img src="./imagens/photo/low-quality/000.jpg" alt="000">
                             <div class="info-cell">
@@ -76,43 +73,11 @@
                                 <h4>modena, emilia-romagna, italy</h4>
                             </div>
                         </a>
-                    </div>
                 </div>
             </div>
         </main>
     <script src="./js/darkmode.js"></script>
     </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
-    <script>
-        function resizeGridItem(item) {
-            grid = document.getElementsByClassName("column")[0];
-            rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-            rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-            rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-            item.style.gridRowEnd = "span " + rowSpan;
-        }
-
-        function resizeAllGridItems() {
-            allItems = document.getElementsByClassName("column-card");
-            for (x = 0; x < allItems.length; x++) {
-                resizeGridItem(allItems[x]);
-            }
-        }
-
-        window.onload = resizeAllGridItems();
-
-        window.addEventListener("resize", resizeAllGridItems);
-
-        allItems = document.getElementsByClassName("column-card");
-        for (x = 0; x < allItems.length; x++) {
-            imagesLoaded(allItems[x], resizeInstance);
-        }
-
-        function resizeInstance(instance) {
-            item = instance.elements[0];
-            resizeGridItem(item);
-        }
-    </script>
     <svg class="svg-filters">
         <filter id="filter-white-mode" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox"
             primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
