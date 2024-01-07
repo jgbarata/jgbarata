@@ -59,7 +59,6 @@ body{
 
 #barata{
     font-weight: bold;
-    transition: color 0.2s;
 }
 
 #home:hover #barata{
@@ -99,7 +98,8 @@ body{
 .container {
     transform-origin: left;
     transform: scaleX(0);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.4s ease;
+    opacity: 0%;
     cursor: pointer;
     position: absolute;
     top: .8rem;
@@ -140,7 +140,8 @@ body{
 @media screen and (max-width:1420px) {
     .container{
         transform: scaleX(1);
-        transition: transform 0.5s ease;
+        transition: transform 0.5s ease, opacity 0.4s ease;
+        opacity: 100%;
     }
 }
 
@@ -246,6 +247,16 @@ main{
     margin-left: 15vw;
 }
 
+.arrow_1 a, .arrow_2 a{
+    -webkit-text-stroke-width: .1rem;
+    -webkit-text-stroke-color: var(--clr-dark);
+    transition: 0.5s ;
+
+}
+
+.arrow_1 a:hover, .arrow_2 a:hover{
+    -webkit-text-stroke-width: 0px;
+}
 
 .arrow_1, .arrow_2 {
     margin-left: 15vw;
@@ -660,6 +671,8 @@ main{
     padding-top: 3rem;
 }
 
+
+
 .center{
     justify-content: center;
 }
@@ -686,6 +699,10 @@ main{
     grid-column: span 2;;
 }
 
+#hello_there{
+    font-size: 1.5rem;
+}
+
 .grid-card h3,.grid-card a, .grid-card a:hover{
     font-size: 1rem;
 
@@ -693,13 +710,14 @@ main{
 }
 
 .grid-card h4{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: normal;
 
     text-align: justify;
 
     grid-column: span 2;
 }
+
 
 .grid-card small,
 .grid-card a:hover small{
@@ -715,7 +733,6 @@ main{
 .grid-card b{
     font-weight: bolder;
 }
-
 
 .red{
     color: var(--clr-red);
@@ -749,7 +766,7 @@ main{
 }
 
 a{
-    transition: color 0.5s, font-weight 0.1s;
+    transition: color 0.5s, font-weight 0.5s;
 }
 
 a:hover{
