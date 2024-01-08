@@ -6,8 +6,8 @@
     --clr-red: #db3a34;
     --clr-grey: #84A5AE;
 
-    --background: var(--clr-dark);
-    --foreground: var(--clr-light);
+    --background: var(--clr-light);
+    --foreground: var(--clr-dark);
 }
 
 .darkmode {
@@ -16,8 +16,8 @@
     --clr-red:#db3a34;
     --clr-grey: #467988;
 
-    --background: var(--clr-light);
-        --foreground: var(--clr-dark);
+    --background: var(--clr-dark);
+        --foreground: var(--clr-light);
 }
 
 *{
